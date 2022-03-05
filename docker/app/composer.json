@@ -1,0 +1,35 @@
+{
+    "name": "riccardo/app",
+    "type": "project",
+    "require": {
+        "php": ">=7.3",
+        "riccardo-curcio/gino": "@dev",
+        "psr/log": "^1.1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "swoole/ide-helper": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Src\\": "src/",
+            "Gino\\": "vendor/riccardo-curcio/gino/src/"
+        }
+    },
+    "repositories": [
+        {
+            "type":"package",
+            "package": {
+              "name": "riccardo-curcio/gino",
+              "version":"v1.2.1-alpha",
+              "source": {
+                  "url": "https://github.com/RiccardoCurcio/gino",
+                  "type": "git",
+                  "reference":"feature/process"
+                }
+            }
+        }
+    ]
+}
+
